@@ -19,11 +19,14 @@ ui <- fluidPage(
   # Plot and Output
   fixedRow(
     column(6, plotlyOutput("Plot1")),
-    column(6, verbatimTextOutput("Click"))
+    column(6, uiOutput("ProjText"))
    ),
   
   # Help text
   tags$hr(),
-  tags$blockquote("Click a dot, get the deets.")
+  tags$blockquote("Click a dot, get the deets."),
+  tags$hr(),
+  verbatimTextOutput("ProjSummary")
+  
   
 )

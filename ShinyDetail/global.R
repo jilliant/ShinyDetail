@@ -22,7 +22,11 @@ Summary <- c("Tyrannosaurus Rex had powerful back legs that let it hunt prey ove
              "Apatosaurus, also known as Brontosaurus, was a member of a group of sauropod dinosaurs. It lived during Jurassic Period, 155.7 to 150.8 million years ago, on a territory of Colorado, Utah, Wyoming, Oklahoma and Mexico.")
 Value <- as.numeric(Value)
 Effort <- as.numeric(Effort)
+
+
 df <- data.frame(Project, Value, Effort, Team, Summary)
+df$Id <- 1:nrow(df)
+
 
 # Test plot
 # x_axis <- list(
@@ -54,3 +58,4 @@ df <- data.frame(Project, Value, Effort, Team, Summary)
 #   layout(xaxis = x_axis, yaxis = y_axis)
 # Plot1
 
+f.summary <- df %>% filter(Id == 4)
