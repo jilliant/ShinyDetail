@@ -6,6 +6,7 @@ library(dplyr)
 
 # ui.R definition
 ui <- fluidPage(
+  
   # Set theme
   theme = shinytheme("spacelab"),
   
@@ -25,10 +26,12 @@ ui <- fluidPage(
   # Help text
   tags$hr(),
   tags$blockquote("God created dinosaurs. God destroyed dinosaurs. 
-                  God created Man. Man destroyed God. 
-                  Man created dinosaurs. 
-                  Dinosaurs eat man...Woman inherits the earth."),
+                   God created Man. Man destroyed God. 
+                   Man created dinosaurs. 
+                   Dinosaurs eat man...Woman inherits the earth."),
   tags$hr()
+
+
   # For testing
   # verbatimTextOutput("ProjSummary")
   

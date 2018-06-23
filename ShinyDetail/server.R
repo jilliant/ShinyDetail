@@ -2,17 +2,18 @@
 server <- function(input, output){
   
     x_axis <- list(
-      title = "Effort",
+      title = "Hard                         <b> Effort </b>                         Easy",
       zeroline = TRUE,
       showline = TRUE,
       showticklabels = FALSE,
       showgrid = FALSE,
       #rangemode = "tozero"
-      range = c(0, 10)
+      range = c(0, 10),
+      autorange = "reversed"
     )
     
     y_axis <- list(
-      title = "Value",
+      title ="Low                         <b> Value </b>                         High",
       zeroline = TRUE,
       showline = TRUE,
       showticklabels = FALSE,
@@ -23,7 +24,7 @@ server <- function(input, output){
     
     
     # reverse axix
-    # xaxis = list(autorange = "reversed")
+    xaxis = list(autorange = "reversed")
     
     output$Plot1 <- renderPlotly({
       plot_ly(
@@ -43,7 +44,7 @@ server <- function(input, output){
       event.data <- event_data(event = "plotly_click", source = "ProjLink")
       
       if (is.null(event.data)) {
-        print("Click to see the link of the point.")
+        print("Click a point")
       } else { 
         df.summary <- df %>% filter(Id == event.data$key)
         
