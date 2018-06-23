@@ -11,7 +11,7 @@ ui <- fluidPage(
   
   # Title and Subtitle 
   h2("Effort vs Value"),
-  h4("This Shiny app showcases coupled events using Plotly's ", tags$code("event_data()"), " function."),
+  #h4("This Shiny app showcases coupled events using Plotly's ", tags$code("event_data()"), " function."),
   
   # bit of space
   tags$hr(),
@@ -24,9 +24,13 @@ ui <- fluidPage(
   
   # Help text
   tags$hr(),
-  tags$blockquote("Click a dot, get the deets."),
-  tags$hr(),
-  verbatimTextOutput("ProjSummary")
+  tags$blockquote("God created dinosaurs. God destroyed dinosaurs. 
+                  God created Man. Man destroyed God. 
+                  Man created dinosaurs. 
+                  Dinosaurs eat man...Woman inherits the earth."),
+  tags$hr()
+  # For testing
+  # verbatimTextOutput("ProjSummary")
   
   
 )
