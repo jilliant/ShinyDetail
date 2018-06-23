@@ -30,7 +30,8 @@ server <- function(input, output){
         df, x = ~Effort, y = ~Value, type = 'scatter', mode = "markers", marker = list(size = 20),
         key = ~Id, source = "ProjLink",
         # Hover text:
-        text = ~paste("Project: ", Project),
+        text = ~paste("Project: ",Project),
+        hoverinfo="text",
         color = ~Team
       ) %>%
         layout(xaxis = x_axis, yaxis = y_axis, showlegend = FALSE)
