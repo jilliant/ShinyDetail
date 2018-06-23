@@ -35,4 +35,9 @@ server <- function(input, output){
         layout(xaxis = x_axis, yaxis = y_axis, showlegend = FALSE)
     })
     
+    output$Click <- renderPrint({
+      d <- event_data("plotly_click")
+      if (is.null(d)) "Click a dot, double click to clear." else d
+    })
+    
 }
